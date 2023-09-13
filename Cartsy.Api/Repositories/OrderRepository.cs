@@ -24,7 +24,7 @@ public class OrderRepository : IOrderRepository
             .Include(o => o.Status)
             .Include(o => o.Consumer)
             .ThenInclude(c => c.Address)
-            .Where(o => o.StatusId == storeId)
+            .Where(o => o.StoreId == storeId)
             .OrderBy( o => o.Id)
             .ToListAsync();
         
