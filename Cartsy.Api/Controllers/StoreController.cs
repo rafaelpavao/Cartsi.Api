@@ -43,7 +43,7 @@ public class StoreController : ControllerBase
     [HttpGet("WithAddress/{storeId}")]
     public async Task<ActionResult<StoreWithAddressDto>> GetStoreWithAddressByIdAsync(int storeId)
     {
-        var storeFromDb = await _repository.GetStoreWithServicesByIdAsync(storeId);
+        var storeFromDb = await _repository.GetStoreWithAddressByIdAsync(storeId);
 
         if (storeFromDb == null)
         {
@@ -56,7 +56,7 @@ public class StoreController : ControllerBase
     [HttpGet("WithItems/{storeId}")]
     public async Task<ActionResult<StoreWithItemsDto>> GetStoreWithItemsByIdAsync(int storeId)
     {
-        var storeFromDb = await _repository.GetStoreWithServicesByIdAsync(storeId);
+        var storeFromDb = await _repository.GetStoreWithItemsByIdAsync(storeId);
 
         if (storeFromDb == null)
         {
@@ -69,7 +69,7 @@ public class StoreController : ControllerBase
     [HttpGet("WithOrders/{storeId}")]
     public async Task<ActionResult<StoreWithOrdersDto>> GetStoreWithOrdersByIdAsync(int storeId)
     {
-        var storeFromDb = await _repository.GetStoreWithServicesByIdAsync(storeId);
+        var storeFromDb = await _repository.GetStoreWithOrdersByIdAsync(storeId);
 
         if (storeFromDb == null)
         {

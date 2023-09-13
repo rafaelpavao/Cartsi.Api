@@ -28,7 +28,7 @@ builder.Services.AddScoped<IAddressRepository, AddressRepository>();
 
 builder.Services.AddDbContext<CartsyContext>(options => 
 {
-    options.UseNpgsql("Host=localhost;Database=Cartsy;Username=postgres;Password=123;");
+    options.UseNpgsql("Host=localhost;Database=Cartsy;Username=postgres;Password=123;Include Error Detail=true");
 });
 var app = builder.Build();
 

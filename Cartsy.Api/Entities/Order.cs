@@ -9,6 +9,7 @@ public class Order
     public DateTime DateCreated { get; set; }
     public int StoreId { get; set; }
     public Store Store { get; set; }
+    
     public List<Item> Items { get; set; } = new();
     public int StatusId { get; set; }
     public OrderStatus Status { get; set; }
